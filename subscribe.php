@@ -80,5 +80,6 @@ exit("XX000");
 //XX003 Invalid phone
 //XX004 E-mail exists
 //XX008 (N) cURL error
+
 //XX009 Success
 ?>
