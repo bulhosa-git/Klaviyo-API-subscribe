@@ -10,7 +10,7 @@
 
 //Using dummy data for documentation purposes, otherwise would use file_get_contents() to get POST data
 
-$email = "test.".rand(1000,9999)."@domain.com";
+$email = "test".rand(1000,9999)."@domain.com";
 $fullname = "artur filipe bulhosa dos santos";
 $birthdate = "31/12/1999";
 $phone = "910000000";
@@ -73,7 +73,7 @@ if( isset($output[0]['id']) ) {
 exit("XX000");
 //XX000 Unknown error
 
-//Error codes
+//Response codes
 //XX000 Unknown error
 //XX001 Invalid email
 //XX002 Invalid date
