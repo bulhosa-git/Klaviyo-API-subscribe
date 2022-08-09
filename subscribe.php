@@ -45,8 +45,6 @@ include 'include/cURL.php';
 
 $output = json_decode($output, true);
 
-print_r($output);
-
 if(isset($output[0]['id'])) {
     exit("XX009");
     //XX009 Success
