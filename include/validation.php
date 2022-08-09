@@ -27,11 +27,11 @@ if( !checkdate ($birthdate[1], $birthdate[0], $birthdate[2]) ) { //Format is: MM
     //XX002 Invalid date
 } else { 
     $birthdate = date("Y-m-d H:i:s", mktime(0, 0, 0, $birthdate[1], $birthdate[0], $birthdate[2]));
-    //1999-12-31 00:00:00
+    //Klaviyo date format: 1999-12-31 00:00:00
 }
 
 //Phone
-if(empty($phone) || !is_numeric($phone) || strlen($phone) != 9) {
+if(!is_numeric($phone) || strlen($phone) != 9) {
     exit("XX003");
     //XX003 Invalid phone
 } else {

@@ -8,7 +8,7 @@ curl_setopt_array($curl, array(
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => $apiMethod,
-    CURLOPT_SSL_VERIFYPEER => false, //Dev. environment only
+    CURLOPT_SSL_VERIFYPEER => false, //Development
     CURLOPT_POSTFIELDS => $apiQuery,
 
     CURLOPT_HTTPHEADER => array(
@@ -22,8 +22,12 @@ $curlResp = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 curl_close($curl);
 
 //Check cURL response
-if( $curlResp != 200) {
+if($curlResp != 200) {
     exit("XX008 (" .$requestID. ")");
     //XX008 (N) cURL error
 }
+
+/*
+200 Success (X)
+*/
 ?>
